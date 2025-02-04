@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación Especial</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffe6e6;
+        }
+        h1 {
+            margin-top: 50px;
+            color: #ff4d4d;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 20px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .yes-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .no-btn {
+            background-color: #FF5733;
+            color: white;
+        }
+        #gif-container {
+            margin-top: 20px;
+        }
+        img {
+            width: 250px;
+            height: auto;
+            border-radius: 10px;
+        }
+        #message {
+            font-size: 22px;
+            font-weight: bold;
+            color: #ff4d4d;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>¿Quieres ser mi San Valentin? 🥰</h1>
+    <div class="buttons">
+        <button class="yes-btn" onclick="mostrarGifSi()">SÍ</button>
+        <button class="no-btn" onclick="mostrarGifNo()">NO</button>
+    </div>
+    <div id="gif-container"></div>
+
+    <script>
+        let contadorNo = 0;
+        function mostrarGifNo() {
+            contadorNo++;
+            document.getElementById('gif-container').innerHTML = `
+                <img src="https://media.tenor.com/mQaH1I3ffZIAAAAM/bear-love.gif" alt="Enojado">
+                <div id="message">¿POR QUÉ NO? 😡</div>
+            `;
+        }
+
+        function mostrarGifSi() {
+            document.getElementById('gif-container').innerHTML = `
+                <div id="message">¡SABÍA QUE DIRÍAS QUE SÍ, ILY<3! 😍</div>
+                <img src="https://i.pinimg.com/originals/e2/ba/bf/e2babfe8fff8b82317217eb2d74cd47a.gif" alt="Romántico">
+            `;
+        }
+    </script>
+</body>
+</html>
